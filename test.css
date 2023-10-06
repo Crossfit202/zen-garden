@@ -1,0 +1,107 @@
+/* css Zen Garden default style v1.02 */
+/* css released under Creative Commons License - http://creativecommons.org/licenses/by-nc-sa/1.0/  */
+
+/* This file based on 'Tranquille' by Dave Shea */
+/* You may use this file as a foundation for any new work, but you may find it easier to start from scratch. */
+/* Not all elements are defined in this file, so you'll most likely want to refer to the xhtml as well. */
+
+/* Your images should be linked as if the CSS file sits in the same folder as the images. ie. no paths. */
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@300;400;500;700&display=swap');
+
+/* basic elements */
+
+body {
+	background-color: black;
+}
+
+body,
+html {
+	margin: 0;
+	padding: 0;
+}
+
+/* Center the body horizontally and vertically */
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/* Ensure the body covers the entire viewport height */
+}
+
+/* Set the width of the content wrapper to 80% */
+.page-wrapper {
+	width: 80%;
+	background-color: white;
+}
+
+h1,
+h2,
+h3 {
+	font-family: 'Press Start 2P';
+}
+
+h1 {
+	display: flex;
+	background-color: #001EA3;
+	color: white;
+	padding: 10px;
+	margin-left: 15%;
+	height: 100px;
+	justify-content: right;
+	align-items: center;
+}
+
+h2 {
+	background-color: #001EA3;
+	padding: 10px;
+	color: white;
+}
+
+a {
+	color: black;
+}
+
+.summary {
+	background-color: #03f807;
+	padding: 5px 10px;
+}
+
+.preamble {
+	background-color: #F4BE34;
+	padding: 10px;
+}
+
+.explanation {
+	background-color: #FD0007;
+	padding: 10px;
+}
+
+.participation {
+	background-color: #001EA3;
+	color: white;
+	padding: 10px;
+}
+
+.participation a {
+	color: white;
+}
+
+.benefits {
+	background-color: #03f807;
+	padding: 10px;
+}
+
+.requirements {
+	background-color: #F4BE34;
+	padding: 10px;
+}
+
+footer {
+	background-color: white;
+}
+
+.sidebar {
+	background-color: #FD0007;
+	padding: 10px;
+}
