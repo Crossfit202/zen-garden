@@ -2,25 +2,25 @@
 
 $hfontfamily: 'Press Start 2P';
 $h1fontsize: 40px;
-$h1color: #FFFFFF;
+$white: #FFFFFF;
 $hfontsize: 25px;
 $hcolor: #F4BE34;
-$paraFont: 'Roboto';
+$font2: 'Roboto';
 $paraSize: 1em;
-$paraColo2: #000000;
-$paraColo1: #FFFFFF;
+$black: #000000;
+$blueColor: #001EA3;
 
-@mixin p{
-    font-family: $paraFont;
+@mixin p($color) {
+    font-family: $font2;
     font-size: $paraSize;
-    color: $paraColo1;
+    color: $color;
     font-weight: 400;
 }
 
 @mixin header1 {
     font-family: $hfontfamily;
     font-size: $h1fontsize;
-    color: $h1color;
+    color: $white;
     font-weight: bold;
 }
 
@@ -41,4 +41,20 @@ $paraColo1: #FFFFFF;
     color: $color;
     text-align: $text-align;
     grid-area: $grid-area
+}
+
+.banner {
+    background-color: $blueColor;
+    color: $white;
+    font-family: $hfontfamily;
+    display: flex;
+    padding: 10px;
+    margin-left: 15%;
+    height: 100px;
+    justify-content: right;
+    align-items: center;
+
+    h2 {
+        font-family: $font2;
+    }
 }
