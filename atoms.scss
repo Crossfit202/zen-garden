@@ -1,0 +1,23 @@
+$hfontfamily: 'Press Start 2P';
+$h1fontsize: 40px;
+$h1color: #FFFFFF;
+$hfontsize: 25px;
+$hcolor: #F4BE34;
+
+@mixin header1{
+    font-family: $hfontfamily;
+    font-size: $h1fontsize;
+    color: $h1color;
+    font-weight: bold;
+}
+
+@mixin header2{
+    @mixin header3{
+        font-family: $hfontfamily;
+        font-size: $hfontsize;
+        color: $hcolor;
+        font-weight: bold;
+}
+
+    }
+    
