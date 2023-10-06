@@ -5,6 +5,17 @@ $h1fontsize: 40px;
 $h1color: #FFFFFF;
 $hfontsize: 25px;
 $hcolor: #F4BE34;
+$paraFont: 'Roboto';
+$paraSize: 1em;
+$paraColo2: #000000;
+$paraColo1: #FFFFFF;
+
+@mixin p{
+    font-family: $paraFont;
+    font-size: $paraSize;
+    color: $paraColo1;
+    font-weight: 400;
+}
 
 @mixin header1 {
     font-family: $hfontfamily;
