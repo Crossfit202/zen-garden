@@ -3,12 +3,14 @@
 $hfontfamily: 'Press Start 2P';
 $h1fontsize: 40px;
 $white: #FFFFFF;
-$hfontsize: 25px;
-$hcolor: #F4BE34;
+$hfontsize: 20px;
+$yellowColor: #F4BE34;
 $font2: 'Roboto';
 $paraSize: 1em;
 $black: #000000;
 $blueColor: #001EA3;
+$redColor: #FD0007;
+$greenColor: #03f807;
 
 @mixin p($color) {
     font-family: $font2;
@@ -25,36 +27,85 @@ $blueColor: #001EA3;
 }
 
 @mixin header2 {
-    @mixin header3 {
+    font-family: $font2;
+}
+
+@mixin header3 {
+    h3 {
         font-family: $hfontfamily;
         font-size: $hfontsize;
-        color: $hcolor;
         font-weight: bold;
+        margin-bottom: 25px;
+        text-align: center;
     }
 
 }
 
-@mixin box($width, $height, $background-color, $color, $text-align, $grid-area) {
+@mixin box($width, $height, $background, $color, $text-align) {
     width: $width;
     height: $height;
-    background-color: $background-color;
+    background: $background;
     color: $color;
     text-align: $text-align;
-    grid-area: $grid-area
 }
 
-.banner {
-    background-color: $blueColor;
-    color: $white;
-    font-family: $hfontfamily;
+*,
+html {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    direction: ltr;
+}
+
+
+body {
     display: flex;
-    padding: 10px;
-    margin-left: 15%;
-    height: 100px;
-    justify-content: right;
-    align-items: center;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-color: $black;
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.intro header {
+    @include box(85%, 100px, rgba($blueColor, 0.75), $white, right);
+    font-family: $hfontfamily;
+    margin-top: 50px;
+    padding-top: 10px;
 
     h2 {
+        margin-top: 10px;
         font-family: $font2;
     }
+}
+
+.summary {
+    @include box(50%, 80px, rgb($greenColor, 0.8), $black, center);
+
+    @include p($black);
+    align-self: center;
+    margin-top: -10px;
+    margin-right: -550px;
+    margin-bottom: 15px;
+    padding: 5px;
+    text-align: right;
+    text-justify: center;
+
+    a {
+        text-decoration: none;
+        color: $black;
+    }
+}
+
+.preamble {
+    @include header3();
+    @include box(45%, 300px, $redColor, $white, right);
+    @include p($white);
+    align-self: flex-start;
+    margin-left: 100px;
+    padding: 10px;
 }
