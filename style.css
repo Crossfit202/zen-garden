@@ -57,10 +57,9 @@ body {
 
 .page-wrapper {
   display: grid;
-  background-color: #000000;
   width: 80%;
   margin-top: 100px;
-  background: url(/images/SVG/Asset\ 3.svg) no-repeat;
+  background: #000000 url(/images/SVG/Asset\ 3.svg) no-repeat;
   background-size: 200px;
   background-position: 85% 15%;
   margin-bottom: 50px;
