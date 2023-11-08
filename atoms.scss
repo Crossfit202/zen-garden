@@ -48,37 +48,11 @@ $machineColor: #272F39;
     background: $background;
     color: $color;
     text-align: $text-align;
-    animation: shiver 5s infinite;
     padding: 10px;
     margin: 0 20px;
 }
 
-@keyframes shiver {
-    0% {
-        transform: translate(0, 0);
-        /* Start at the original position */
-    }
 
-    25% {
-        transform: translate(-2px, -2px);
-        /* Move slightly to the top-left */
-    }
-
-    50% {
-        transform: translate(0px, 0px);
-        /* Move slightly to the bottom-right */
-    }
-
-    75% {
-        transform: translate(-2px, -2px);
-        /* Move slightly to the top-left again */
-    }
-
-    100% {
-        transform: translate(0, 0);
-        /* End at the original position */
-    }
-}
 
 *,
 html {
@@ -86,7 +60,7 @@ html {
     margin: 0;
     box-sizing: border-box;
     direction: ltr;
-    z-index: 1;
+    z-index: 2;
 }
 
 
@@ -95,20 +69,20 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    z-index: 2;
 }
 
-.page-wrapper {
-    position: relative;
-    /* Set the position property to relative */
+h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: $hfontfamily;
 }
 
 .page-wrapper::before {
     content: "";
     background-color: $machineColor;
-    /* Set the background color to your desired color */
     width: 100%;
-    height: 98px;
-    /* Adjust the height as needed */
     position: fixed;
     top: 0;
     left: 0;
@@ -116,12 +90,13 @@ body {
 }
 
 .page-wrapper {
-    display: grid;
-    width: 80%;
-    margin-top: 100px;
+    position: relative;
+    overflow: hidden;
+    width: 95%;
+    margin-top: 70px;
     background: $black url(/images/SVG/Asset\ 3.svg) no-repeat;
     background-size: 200px;
-    background-position: 85% 15%;
+    background-position: 83% 13%;
     margin-bottom: 50px;
     box-shadow: 0 -5px 10px rgba(255, 255, 255, 0.1), inset 0 -5px 10px rgba(255, 255, 255, 0.9);
 }
@@ -133,7 +108,7 @@ body {
 }
 
 .intro header {
-    @include box(85%, 100px, rgba($blueColor, 0.75), $white, right);
+    @include box(90%, 100px, rgba($blueColor, 0.75), $white, right);
     font-family: $hfontfamily;
     margin-top: 50px;
     padding-top: 10px;
@@ -145,16 +120,13 @@ body {
 }
 
 .summary {
-    @include box(50%, 80px, rgb($greenColor, 0.8), $black, center);
+    @include box(55%, 70px, rgb($greenColor, 0.8), $black, left);
 
     @include p($black);
-    align-self: center;
     margin-top: -10px;
-    margin-left: 40%;
-    margin-bottom: 15px;
+    margin-right: 5vw;
+    margin-bottom: 45px;
     padding: 5px;
-    text-align: right;
-    text-justify: center;
 
     a {
         text-decoration: none;
@@ -164,52 +136,134 @@ body {
 
 .preamble {
     @include header3();
-    @include box(45%, 425px, $redColor, $white, right);
+    @include box(50%, 325px, $redColor, $white, right);
     @include p($white);
     align-self: flex-start;
-    margin-left: 100px;
+    margin-left: 3vw;
     padding: 10px;
+    padding-top: 50px
 }
 
 .explanation {
-    @include box(90%, 400px, $blueColor, $white, right);
-    height: 200px;
+    @include box(20%, 700px, $blueColor, $white, left);
     padding: 10px;
-    margin-top: 20px
+    position: relative;
+    margin-top: -55px;
+    margin-left: 5vw;
+    z-index: 2;
 }
 
 .participation {
-    @include box(90%, 300px, $yellowColor, $black, left);
+    @include box(48%, 400px, $yellowColor, $black, left);
     padding: 10px;
-    margin-top: 20px
+    position: relative;
+    padding-top: 75px;
+    margin-top: -700px;
+    margin-left: 40vw;
+    z-index: 1;
+
 }
 
 .benefits {
-    @include box(80%, 200px, $redColor, $white , right);
-    margin-top: 10px;
+    @include box(80%, 125px, $redColor, $white , right);
+    margin-top: 145px;
+    margin-left: 3vw;
+    position: relative;
 }
 
 .requirements {
-    @include box(90%, 500px, $greenColor, $black, center);
-    margin-top: 10px;
+    @include box(50%, 700px, $greenColor, $black, left);
+    margin-top: -150px;
+    margin-left: 43vw;
+    padding-top: 175px;
+}
+
+.requirements p:nth-of-type(5) {
+    background-color: $yellowColor;
+    margin-top: -300px;
+    margin-left: -630px;
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    padding-top: 30%;
+    padding-right: 5%;
+    padding-left: 15%;
+    text-align: center;
 }
 
 .sidebar {
-    @include box(90%, 500px, $blueColor, $white, left);
-    margin-top: 10px;
+    @include box(96%, 300px, none, $white, left);
+    margin-top: 50px;
     margin-bottom: 100px;
-    z-index: 0;
 }
 
 .sidebar a {
-    background-color: $blueColor;
     color: white;
     text-decoration: none;
 
 }
 
+.design-archives {
+    background-color: $redColor;
+    color: white;
+
+    h3 {
+        padding: 10px;
+    }
+
+    ul {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height .7s ease;
+    }
+}
+
+.design-archives:hover ul {
+    max-height: 75px;
+}
+
+.zen-resources {
+    background-color: $yellowColor;
+    color: white;
+
+    h3 {
+        padding: 10px;
+    }
+
+    ul {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height .7s ease;
+    }
+}
+
+.zen-resources:hover ul {
+    max-height: 75px;
+}
+
+.design-selection {
+    background-color: $blueColor;
+    color: white;
+
+    h3 {
+        padding: 10px;
+    }
+
+    ul {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height .7s ease;
+    }
+}
+
+.design-selection:hover ul {
+    max-height: 75px;
+}
+
 ul {
     list-style: none;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 
@@ -224,7 +278,7 @@ footer {
     align-items: end;
     position: fixed;
     bottom: 0;
-    width: 85%;
+    width: 100%;
     margin-left: -10px;
 }
 
