@@ -15,6 +15,8 @@ body {
   align-items: center;
   position: relative;
   z-index: 2;
+  height: 100%;
+  font-family: "Roboto";
 }
 
 h3 {
@@ -35,7 +37,6 @@ h3 {
 
 .page-wrapper {
   position: relative;
-  overflow: hidden;
   width: 100%;
   max-width: 1500px;
   margin-top: 70px;
@@ -58,7 +59,7 @@ h3 {
   background: rgba(0, 30, 163, 0.75);
   color: #FFFFFF;
   text-align: right;
-  padding: 10px;
+  padding: 20px;
   margin: 0 20px;
   font-family: "Press Start 2P";
   margin-top: 50px;
@@ -71,16 +72,17 @@ h3 {
 
 .summary {
   width: 55%;
-  height: 70px;
+  height: 100px;
   background: rgba(3, 248, 7, 0.8);
   color: #000000;
   text-align: left;
-  padding: 10px;
+  padding: 20px;
   margin: 0 20px;
   font-family: "Roboto";
   font-size: 1em;
   color: #000000;
   font-weight: 400;
+  line-height: 1.5;
   margin-top: -10px;
   margin-right: 5vw;
   margin-bottom: 45px;
@@ -97,12 +99,13 @@ h3 {
   background: #FD0007;
   color: #FFFFFF;
   text-align: right;
-  padding: 10px;
+  padding: 20px;
   margin: 0 20px;
   font-family: "Roboto";
   font-size: 1em;
   color: #FFFFFF;
   font-weight: 400;
+  line-height: 1.5;
   align-self: flex-start;
   margin-left: 3vw;
   padding: 10px;
@@ -117,13 +120,18 @@ h3 {
 }
 
 .explanation {
-  width: 20%;
+  width: 25%;
   height: 700px;
   background: #001EA3;
   color: #FFFFFF;
   text-align: left;
-  padding: 10px;
+  padding: 20px;
   margin: 0 20px;
+  font-family: "Roboto";
+  font-size: 1em;
+  color: #FFFFFF;
+  font-weight: 400;
+  line-height: 1.5;
   padding: 10px;
   position: relative;
   margin-top: -55px;
@@ -133,17 +141,22 @@ h3 {
 
 .participation {
   width: 48%;
-  height: 400px;
+  height: 600px;
   background: #F4BE34;
   color: #000000;
   text-align: left;
-  padding: 10px;
+  padding: 20px;
   margin: 0 20px;
+  font-family: "Roboto";
+  font-size: 1em;
+  color: #000000;
+  font-weight: 400;
+  line-height: 1.5;
   padding: 10px;
   position: relative;
   padding-top: 75px;
-  margin-top: -700px;
-  margin-left: 40vw;
+  margin-top: -600px;
+  margin-left: 30vw;
   z-index: 1;
 }
 
@@ -153,9 +166,14 @@ h3 {
   background: #FD0007;
   color: #FFFFFF;
   text-align: right;
-  padding: 10px;
+  padding: 20px;
   margin: 0 20px;
-  margin-top: 145px;
+  font-family: "Roboto";
+  font-size: 1em;
+  color: #FFFFFF;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-top: 155px;
   margin-left: 3vw;
   position: relative;
 }
@@ -166,17 +184,22 @@ h3 {
   background: #03f807;
   color: #000000;
   text-align: left;
-  padding: 10px;
+  padding: 20px;
   margin: 0 20px;
+  font-family: "Roboto";
+  font-size: 1em;
+  color: #000000;
+  font-weight: 400;
+  line-height: 1.5;
   margin-top: -150px;
-  margin-left: 43vw;
+  margin-left: 25vw;
   padding-top: 175px;
 }
 
 .requirements p:nth-of-type(5) {
   background-color: #F4BE34;
   margin-top: -300px;
-  margin-left: -630px;
+  margin-left: -750px;
   height: 400px;
   width: 400px;
   border-radius: 50%;
@@ -192,7 +215,7 @@ h3 {
   background: none;
   color: #FFFFFF;
   text-align: left;
-  padding: 10px;
+  padding: 20px;
   margin: 0 20px;
   margin-top: 50px;
   margin-bottom: 100px;
@@ -251,20 +274,20 @@ h3 {
 }
 
 .design-selection:hover ul {
-  max-height: 75px;
+  max-height: 100%;
 }
 
 ul {
   list-style: none;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 footer {
   display: flex;
   background: transparent url(images/SVG/Asset\ 2.svg) no-repeat;
   height: 150px;
-  max-width: 1500px;
+  max-width: 1600px;
   background-size: contain;
   background-position: bottom;
   justify-content: space-around;
@@ -272,17 +295,122 @@ footer {
   position: fixed;
   bottom: 0;
   width: 100%;
-  margin-left: -10px;
+  margin-left: -40px;
 }
 
 footer a {
+  font-family: "Roboto";
+  font-size: 1em;
+  color: #FFFFFF;
+  font-weight: 400;
+  line-height: 1.5;
   background-color: grey;
-  width: 50%;
-  height: 10%;
+  width: 10%;
   margin: 10px;
-  font-size: 12px;
+  font-size: 20px;
   border-radius: 10px;
   text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  background-color: #F4BE34;
+  color: black;
+}
+
+@media (max-width: 1600px) {
+  .page-wrapper {
+    width: 80%;
+  }
+}
+@media (max-width: 767px) {
+  .page-wrapper {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+  }
+  .intro header,
+  .summary,
+  .preamble,
+  .explanation,
+  .participation,
+  .benefits,
+  .requirements,
+  .requirements p:nth-of-type(5),
+  .sidebar {
+    width: 95%;
+    height: 100%;
+    margin: auto;
+    margin-bottom: 20px;
+    padding: 20px;
+  }
+  .intro header {
+    width: 80%;
+    margin-right: 10px;
+  }
+  .summary {
+    margin-top: -20px;
+  }
+  .preamble {
+    padding-bottom: 150px;
+  }
+  .explanation {
+    margin-top: -150px;
+    width: 70%;
+    margin-right: 10px;
+  }
+  .participation {
+    width: 80%;
+    padding-top: 150px;
+    margin-left: 10px;
+    margin-top: -125px;
+    padding-bottom: 100px;
+  }
+  .benefits {
+    width: 50%;
+    margin-right: 10px;
+    margin-top: -100px;
+  }
+  .requirements {
+    padding-top: 120px;
+    margin-top: -100px;
+    width: 90%;
+  }
+  .requirements p:nth-of-type(5) {
+    border-radius: 0px;
+    margin-top: 50px;
+  }
+  .design-archives,
+  .design-selection,
+  .zen-resources {
+    padding-bottom: 3px;
+    margin-bottom: 20px;
+  }
+  .design-archives ul,
+  .design-selection ul,
+  .zen-resources ul {
+    max-height: 100%;
+  }
+  footer {
+    height: 150px;
+    max-width: 1600px;
+    background-size: contain;
+    background-position: bottom;
+    justify-content: space-evenly;
+    align-items: end;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  footer a {
+    margin: 10px;
+    font-size: 12px;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
