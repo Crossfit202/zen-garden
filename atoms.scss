@@ -277,14 +277,14 @@ ul {
 footer {
     display: flex;
     background: transparent url(images/SVG/Asset\ 2.svg) no-repeat;
-    height: 150px;
+    height: 250px;
     max-width: 1600px;
     background-size: contain;
     background-position: bottom;
     justify-content: space-around;
     align-items: end;
     position: fixed;
-    bottom: 0;
+    bottom: -0;
     width: 100%;
     margin-left: -40px;
 }

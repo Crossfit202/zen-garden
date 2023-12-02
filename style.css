@@ -286,7 +286,7 @@ ul {
 footer {
   display: flex;
   background: transparent url(images/SVG/Asset\ 2.svg) no-repeat;
-  height: 150px;
+  height: 250px;
   max-width: 1600px;
   background-size: contain;
   background-position: bottom;
