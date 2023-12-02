@@ -12,7 +12,11 @@
 /* basic elements */
 
 body {
-	background-color: black;
+	background: black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
 }
 
 body,
@@ -29,18 +33,13 @@ body img {
   background-size: cover;
 }
 
-/* Center the body horizontally and vertically */
-body {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	/* Ensure the body covers the entire viewport height */
-}
+
 
 /* Set the width of the content wrapper to 80% */
 .page-wrapper {
 	width: 80%;
 	background-color: white;
+	z-index: -1;
 }
 
 h1,
@@ -83,6 +82,7 @@ a {
 .explanation {
 	background-color: #FD0007;
 	padding: 10px;
+	color: white;
 }
 
 .participation {
@@ -105,8 +105,8 @@ a {
 	padding: 10px;
 }
 
-footer {
-	background-color: white;
+.footer {
+	background-color: red url(/images/1x/Asset\ 1.png);
 }
 
 .sidebar {
