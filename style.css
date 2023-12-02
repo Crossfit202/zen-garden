@@ -36,7 +36,8 @@ h3 {
 .page-wrapper {
   position: relative;
   overflow: hidden;
-  width: 95%;
+  width: 100%;
+  max-width: 1500px;
   margin-top: 70px;
   background: #000000 url(/images/SVG/Asset\ 3.svg) no-repeat;
   background-size: 200px;
@@ -263,7 +264,7 @@ footer {
   display: flex;
   background: transparent url(images/SVG/Asset\ 2.svg) no-repeat;
   height: 150px;
-  max-height: 175px;
+  max-width: 1500px;
   background-size: contain;
   background-position: bottom;
   justify-content: space-around;
