@@ -62,8 +62,8 @@ h3 {
   padding: 20px;
   margin: 0 20px;
   font-family: "Press Start 2P";
+  margin: 0;
   margin-top: 50px;
-  padding-top: 10px;
 }
 .intro header h2 {
   margin-top: 10px;
@@ -71,8 +71,8 @@ h3 {
 }
 
 .summary {
-  width: 55%;
-  height: 100px;
+  width: 50vw;
+  height: auto;
   background: rgba(3, 248, 7, 0.8);
   color: #000000;
   text-align: left;
@@ -94,8 +94,8 @@ h3 {
 }
 
 .preamble {
-  width: 50%;
-  height: 325px;
+  width: 50vw;
+  height: auto;
   background: #FD0007;
   color: #FFFFFF;
   text-align: right;
@@ -108,8 +108,8 @@ h3 {
   line-height: 1.5;
   align-self: flex-start;
   margin-left: 3vw;
-  padding: 10px;
   padding-top: 50px;
+  padding-bottom: 70px;
 }
 .preamble h3 {
   font-family: "Press Start 2P";
@@ -121,7 +121,7 @@ h3 {
 
 .explanation {
   width: 25%;
-  height: 700px;
+  height: auto;
   background: #001EA3;
   color: #FFFFFF;
   text-align: left;
@@ -136,12 +136,14 @@ h3 {
   position: relative;
   margin-top: -55px;
   margin-left: 5vw;
+  padding: 1vw;
   z-index: 2;
+  padding-bottom: 300px;
 }
 
 .participation {
   width: 48%;
-  height: 600px;
+  height: auto;
   background: #F4BE34;
   color: #000000;
   text-align: left;
@@ -152,17 +154,17 @@ h3 {
   color: #000000;
   font-weight: 400;
   line-height: 1.5;
-  padding: 10px;
+  padding: 1vw;
+  padding-top: 80px;
   position: relative;
-  padding-top: 75px;
-  margin-top: -600px;
-  margin-left: 30vw;
+  margin-top: -750px;
+  margin-left: 40%;
   z-index: 1;
 }
 
 .benefits {
-  width: 80%;
-  height: 125px;
+  width: 90%;
+  height: auto;
   background: #FD0007;
   color: #FFFFFF;
   text-align: right;
@@ -173,14 +175,14 @@ h3 {
   color: #FFFFFF;
   font-weight: 400;
   line-height: 1.5;
-  margin-top: 155px;
-  margin-left: 3vw;
+  margin: auto;
+  margin-top: 160px;
   position: relative;
 }
 
 .requirements {
   width: 50%;
-  height: 700px;
+  height: auto;
   background: #03f807;
   color: #000000;
   text-align: left;
@@ -192,14 +194,14 @@ h3 {
   font-weight: 400;
   line-height: 1.5;
   margin-top: -150px;
-  margin-left: 25vw;
+  margin-left: 35vw;
   padding-top: 175px;
 }
 
 .requirements p:nth-of-type(5) {
   background-color: #F4BE34;
   margin-top: -300px;
-  margin-left: -750px;
+  margin-left: -90%;
   height: 400px;
   width: 400px;
   border-radius: 50%;
@@ -229,6 +231,7 @@ h3 {
 .design-archives {
   background-color: #FD0007;
   color: white;
+  height: auto;
 }
 .design-archives h3 {
   padding: 10px;
@@ -263,6 +266,7 @@ h3 {
 .design-selection {
   background-color: #001EA3;
   color: white;
+  height: auto;
 }
 .design-selection h3 {
   padding: 10px;
@@ -319,12 +323,81 @@ footer a:hover {
   color: black;
 }
 
-@media (max-width: 1600px) {
-  .page-wrapper {
-    width: 80%;
+@media (max-width: 1024px) {
+  .preamble {
+    width: 70vw;
+    height: auto;
+    background: #FD0007;
+    color: #FFFFFF;
+    text-align: right;
+    padding: 20px;
+    margin: 0 20px;
+    padding: 20px;
+    padding-bottom: 80px;
+  }
+  .explanation {
+    width: 35vw;
+    padding: 20px;
+    padding-bottom: 300px;
+  }
+  .participation {
+    width: 50%;
+    height: auto;
+    background: #F4BE34;
+    color: #000000;
+    text-align: left;
+    padding: 20px;
+    margin: 0 20px;
+    padding: 20px;
+    padding-top: 100px;
+    z-index: 1;
+    margin-left: 45vw;
+    margin-top: -850px;
+  }
+  .benefits {
+    width: 90vw;
+    height: auto;
+    background: #FD0007;
+    color: #FFFFFF;
+    text-align: right;
+    padding: 20px;
+    margin: 0 20px;
+    margin: auto;
+    margin-top: 80px;
+    z-index: 4;
+  }
+  .requirements {
+    width: 50vw;
+    height: auto;
+    background: #03f807;
+    color: #000000;
+    text-align: left;
+    padding: 20px;
+    margin: 0 20px;
+    position: relative;
+    z-index: 3;
+    padding-top: 250px;
+    margin-left: 45vw;
+    margin-top: -220px;
+  }
+  .requirements p:nth-of-type(5) {
+    margin-left: -55vw;
+    width: 50vw;
+    height: 40vw;
+  }
+  div#zen-requirements.requirements p:last-child {
+    text-align: right;
+  }
+  .sidebar {
+    width: auto;
+    margin-bottom: 0;
+  }
+  footer {
+    margin-left: 0px;
+    z-index: 6;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 480px) {
   .page-wrapper {
     width: 95%;
     display: flex;
@@ -344,6 +417,9 @@ footer a:hover {
     margin: auto;
     margin-bottom: 20px;
     padding: 20px;
+  }
+  .sidebar {
+    z-index: 0;
   }
   .intro header {
     width: 80%;
@@ -402,6 +478,7 @@ footer a:hover {
     position: fixed;
     bottom: 0;
     width: 100%;
+    margin-left: 0px;
   }
   footer a {
     margin: 10px;

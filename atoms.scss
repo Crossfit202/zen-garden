@@ -113,8 +113,8 @@ h3 {
 .intro header {
     @include box(90%, 100px, rgba($blueColor, 0.75), $white, right);
     font-family: $hfontfamily;
+    margin: 0;
     margin-top: 50px;
-    padding-top: 10px;
 
     h2 {
         margin-top: 10px;
@@ -123,7 +123,7 @@ h3 {
 }
 
 .summary {
-    @include box(55%, 100px, rgb($greenColor, 0.8), $black, left);
+    @include box(50vw, auto, rgb($greenColor, 0.8), $black, left);
 
     @include p($black);
     margin-top: -10px;
@@ -139,56 +139,58 @@ h3 {
 
 .preamble {
     @include header3();
-    @include box(50%, 325px, $redColor, $white, right);
+    @include box(50vw, auto, $redColor, $white, right);
     @include p($white);
     align-self: flex-start;
     margin-left: 3vw;
-    padding: 10px;
-    padding-top: 50px
+    padding-top: 50px;
+    padding-bottom: 70px;
 }
 
 .explanation {
-    @include box(25%, 700px, $blueColor, $white, left);
+    @include box(25%, auto, $blueColor, $white, left);
     @include p($white);
     padding: 10px;
     position: relative;
     margin-top: -55px;
     margin-left: 5vw;
+    padding: 1vw;
     z-index: 2;
+    padding-bottom: 300px;
 }
 
 .participation {
-    @include box(48%, 600px, $yellowColor, $black, left);
+    @include box(48%, auto, $yellowColor, $black, left);
     @include p($black);
-    padding: 10px;
+    padding: 1vw;
+    padding-top: 80px;
     position: relative;
-    padding-top: 75px;
-    margin-top: -600px;
-    margin-left: 30vw;
+    margin-top: -750px;
+    margin-left: 40%;
     z-index: 1;
 
 }
 
 .benefits {
-    @include box(80%, 125px, $redColor, $white , right);
+    @include box(90%, auto, $redColor, $white , right);
     @include p($white);
-    margin-top: 155px;
-    margin-left: 3vw;
+    margin: auto;
+    margin-top: 160px;
     position: relative;
 }
 
 .requirements {
-    @include box(50%, 700px, $greenColor, $black, left);
+    @include box(50%, auto, $greenColor, $black, left);
     @include p($black);
     margin-top: -150px;
-    margin-left: 25vw;
+    margin-left: 35vw;
     padding-top: 175px;
 }
 
 .requirements p:nth-of-type(5) {
     background-color: $yellowColor;
     margin-top: -300px;
-    margin-left: -750px;
+    margin-left: -90%;
     height: 400px;
     width: 400px;
     border-radius: 50%;
@@ -213,6 +215,7 @@ h3 {
 .design-archives {
     background-color: $redColor;
     color: white;
+    height: auto;
 
     h3 {
         padding: 10px;
@@ -251,6 +254,7 @@ h3 {
 .design-selection {
     background-color: $blueColor;
     color: white;
+    height: auto;
 
     h3 {
         padding: 10px;
@@ -306,13 +310,67 @@ footer a:hover {
     color: black;
 }
 
-@media (max-width: 1600px) {
-    .page-wrapper {
-        width: 80%;
+@media (max-width: 1024px) {
+
+    .preamble {
+        @include box(70vw, auto, $redColor, $white, right);
+        padding: 20px;
+        padding-bottom: 80px;
+    }
+
+    .explanation {
+        width: 35vw;
+        padding: 20px;
+        padding-bottom: 300px;
+    }
+
+    .participation {
+        @include box(50%, auto, $yellowColor, $black, left);
+        padding: 20px;
+        padding-top: 100px;
+        z-index: 1;
+        margin-left: 45vw;
+        margin-top: -850px;
+    }
+
+    .benefits {
+        @include box(90vw, auto, $redColor, $white , right);
+        margin: auto;
+        margin-top: 80px;
+        z-index: 4;
+    }
+
+    .requirements {
+        @include box(50vw, auto, $greenColor, $black, left);
+        position: relative;
+        z-index: 3;
+        padding-top: 250px;
+        margin-left: 45vw;
+        margin-top: -220px;
+    }
+
+    .requirements p:nth-of-type(5) {
+        margin-left: -55vw;
+        width: 50vw;
+        height: 40vw;
+    }
+
+    div#zen-requirements.requirements p:last-child {
+        text-align: right;
+    }
+
+    .sidebar {
+        width: auto;
+        margin-bottom: 0;
+    }
+
+    footer {
+        margin-left: 0px;
+        z-index: 6;
     }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 480px) {
 
     .page-wrapper {
         width: 95%;
@@ -334,6 +392,10 @@ footer a:hover {
         margin: auto;
         margin-bottom: 20px;
         padding: 20px;
+    }
+
+    .sidebar {
+        z-index: 0;
     }
 
     .intro header {
@@ -402,6 +464,7 @@ footer a:hover {
         position: fixed;
         bottom: 0;
         width: 100%;
+        margin-left: 0px;
     }
 
     footer a {
