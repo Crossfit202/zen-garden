@@ -370,6 +370,28 @@ footer a:hover {
     }
 }
 
+@media (max-width: 745px) {
+    .participation {
+        margin-top: -1030px;
+    }
+    
+    .requirements {
+        margin-bottom: 20px;
+    }
+    
+    .sidebar {
+    }
+
+    footer {
+        width: 100vw;
+        height: auto;
+    }
+
+    footer a {
+        font-size: 0.8em;
+    }
+}
+
 @media (max-width: 480px) {
 
     .page-wrapper {
