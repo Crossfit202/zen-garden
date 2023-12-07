@@ -401,10 +401,6 @@ footer a:hover {
       width: 50vw;
       height: 40vw;
   } */
-  .sidebar {
-    width: auto;
-    margin-bottom: 0;
-  }
   footer {
     margin-left: 0px;
     z-index: 6;
