@@ -217,7 +217,6 @@ h3 {
 .sidebar a {
     color: white;
     text-decoration: none;
-
 }
 
 .design-archives {
@@ -324,6 +323,7 @@ footer a {
     text-decoration: none;
     font-weight: bold;
     margin-bottom: 15px;
+    transition: all .5s;
 }
 
 footer a:hover {
@@ -366,7 +366,7 @@ footer a:hover {
         @include box(70vw, auto, $greenColor, $black, left);
         position: relative;
         z-index: 3;
-        padding-top: 200px;
+        padding-top: 175px;
         margin-left: 30vw;
         margin-top: -120px;
     }
