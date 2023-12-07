@@ -315,7 +315,7 @@ ul {
 
 footer {
   display: flex;
-  background: transparent url(images/SVG/control_panel.svg) no-repeat;
+  background: transparent url(./images/SVG/control_panel.svg) no-repeat;
   height: 250px;
   max-width: 1555px;
   background-size: contain;
@@ -526,7 +526,7 @@ body {
   width: 100%;
   max-width: 1490px;
   margin-top: 70px;
-  background: #000000 url(/images/SVG/Asset\ 3.svg) no-repeat;
+  background: #000000 url(./images/SVG/Asset\ 3.svg) no-repeat;
   background-size: 200px;
   background-position: 83% 16%;
   margin-bottom: 50px;
