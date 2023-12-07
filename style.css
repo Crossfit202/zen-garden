@@ -183,7 +183,7 @@ footer a:hover {
   position: relative;
   margin-right: 50px;
   z-index: 1;
-  margin-top: -750px;
+  margin-top: -825px;
 }
 
 .benefits {
@@ -340,10 +340,6 @@ footer {
     border-radius: 10px;
     padding: 20px;
     padding-bottom: 80px;
-  }
-  .page-wrapper {
-    background-position: 90% 27%;
-    background-size: 220px;
   }
   .explanation {
     width: 45%;
@@ -532,7 +528,7 @@ body {
   margin-top: 70px;
   background: #000000 url(/images/SVG/Asset\ 3.svg) no-repeat;
   background-size: 200px;
-  background-position: 83% 13%;
+  background-position: 83% 16%;
   margin-bottom: 50px;
   box-shadow: 0 -5px 10px rgba(255, 255, 255, 0.1), inset 0 -5px 10px rgba(255, 255, 255, 0.9);
 }
@@ -542,6 +538,13 @@ body {
   flex-direction: column;
   justify-content: end;
   align-items: end;
+}
+
+@media (max-width: 1024px) {
+  .page-wrapper {
+    background-position: 90% 27%;
+    background-size: 220px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
