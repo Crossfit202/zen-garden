@@ -395,6 +395,9 @@ footer a:hover {
     margin-left: 30vw;
     margin-top: -120px;
   }
+  .sidebar {
+    margin-bottom: 250px;
+  }
   /*
   .requirements p:nth-of-type(5) {
       margin-left: -55vw;
