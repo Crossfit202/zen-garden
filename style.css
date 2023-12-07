@@ -1,50 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@300;400;500;700&display=swap");
-*,
-html {
-  padding: 0px;
-  margin: 0;
-  box-sizing: border-box;
-  direction: ltr;
-  z-index: 2;
-}
-
-body {
-  background: #272F39;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  z-index: 2;
-  height: 100%;
-  font-family: "Roboto";
-}
-
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@300;400;500;700&display=swap");
 h3 {
   text-align: center;
   margin-bottom: 20px;
   font-family: "Press Start 2P";
-}
-
-.page-wrapper::before {
-  content: "";
-  background-color: #272F39;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 9999;
-}
-
-.page-wrapper {
-  position: relative;
-  width: 100%;
-  max-width: 1490px;
-  margin-top: 70px;
-  background: #000000 url(/images/SVG/Asset\ 3.svg) no-repeat;
-  background-size: 200px;
-  background-position: 83% 13%;
-  margin-bottom: 50px;
-  box-shadow: 0 -5px 10px rgba(255, 255, 255, 0.1), inset 0 -5px 10px rgba(255, 255, 255, 0.9);
 }
 
 .intro {
@@ -53,18 +13,43 @@ h3 {
   align-items: flex-end;
 }
 
+footer a {
+  font-family: "Roboto";
+  font-size: 1em;
+  color: #FFFFFF;
+  font-weight: 400;
+  line-height: 1.5;
+  background-color: grey;
+  width: 10%;
+  margin: 10px;
+  font-size: 20px;
+  border-radius: 10px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  margin-bottom: 15px;
+  transition: all 0.5s;
+}
+
+footer a:hover {
+  background-color: #F4BE34;
+  color: black;
+}
+
 .intro header {
   width: 90%;
-  height: 100px;
+  height: 120px;
   background: rgba(0, 30, 163, 0.75);
   color: #FFFFFF;
   text-align: right;
-  padding: 20px;
   margin: 0 20px;
+  padding: 30px;
+  border-radius: 10px;
   font-family: "Press Start 2P";
   margin: 0;
   margin-right: 3px;
   margin-top: 50px;
+  border-radius: 0;
 }
 .intro header h2 {
   margin-top: 10px;
@@ -77,8 +62,9 @@ h3 {
   background: rgba(3, 248, 7, 0.8);
   color: #000000;
   text-align: left;
-  padding: 20px;
   margin: 0 20px;
+  padding: 30px;
+  border-radius: 10px;
   font-family: "Roboto";
   font-size: 1em;
   color: #000000;
@@ -87,18 +73,48 @@ h3 {
   margin-top: -10px;
   margin-right: 5%;
   margin-bottom: 45px;
-  padding: 5px;
 }
 .summary a {
   text-decoration: none;
   color: #000000;
 }
 
-#zen-supporting:not(#zen-explanation) {
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
-  align-items: end;
+@keyframes leftSlide {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  68% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes rightSlide {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  68% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.participation,
+.summary,
+.requirements {
+  animation: rightSlide 2.5s ease;
+}
+
+.preamble,
+.explanation,
+.benefits {
+  animation: leftSlide 2s ease;
 }
 
 .preamble {
@@ -107,8 +123,9 @@ h3 {
   background: #FD0007;
   color: #FFFFFF;
   text-align: right;
-  padding: 20px;
   margin: 0 20px;
+  padding: 30px;
+  border-radius: 10px;
   font-family: "Roboto";
   font-size: 1em;
   color: #FFFFFF;
@@ -133,14 +150,14 @@ h3 {
   background: #001EA3;
   color: #FFFFFF;
   text-align: left;
-  padding: 20px;
   margin: 0 20px;
+  padding: 30px;
+  border-radius: 10px;
   font-family: "Roboto";
   font-size: 1em;
   color: #FFFFFF;
   font-weight: 400;
   line-height: 1.5;
-  padding: 10px;
   position: relative;
   margin-top: -55px;
   margin-right: 68%;
@@ -154,14 +171,14 @@ h3 {
   background: #F4BE34;
   color: #000000;
   text-align: left;
-  padding: 20px;
   margin: 0 20px;
+  padding: 30px;
+  border-radius: 10px;
   font-family: "Roboto";
   font-size: 1em;
   color: #000000;
   font-weight: 400;
   line-height: 1.5;
-  padding: 10px;
   padding-top: 80px;
   position: relative;
   margin-right: 50px;
@@ -175,15 +192,16 @@ h3 {
   background: #FD0007;
   color: #FFFFFF;
   text-align: right;
-  padding: 20px;
   margin: 0 20px;
+  padding: 30px;
+  border-radius: 10px;
   font-family: "Roboto";
   font-size: 1em;
   color: #FFFFFF;
   font-weight: 400;
   line-height: 1.5;
   margin: auto;
-  margin-top: 160px;
+  margin-top: 150px;
   position: relative;
 }
 
@@ -193,8 +211,9 @@ h3 {
   background: #03f807;
   color: #000000;
   text-align: left;
-  padding: 20px;
   margin: 0 20px;
+  padding: 30px;
+  border-radius: 10px;
   font-family: "Roboto";
   font-size: 1em;
   color: #000000;
@@ -202,31 +221,19 @@ h3 {
   line-height: 1.5;
   position: relative;
   z-index: 1;
-  margin-top: -150px;
+  margin-top: -140px;
   padding-top: 175px;
 }
 
-/*
-.requirements p:nth-of-type(5) {
-    background-color: $yellowColor;
-    margin-top: -300px;
-    margin-left: -90%;
-    height: 400px;
-    width: 400px;
-    border-radius: 50%;
-    padding-top: 30%;
-    padding-right: 5%;
-    padding-left: 15%;
-    text-align: center;
-} */
 .sidebar {
   width: 96%;
   height: 300px;
   background: none;
   color: #FFFFFF;
   text-align: left;
-  padding: 20px;
   margin: 0 20px;
+  padding: 30px;
+  border-radius: 10px;
   margin-top: 50px;
   margin-bottom: 300px;
 }
@@ -321,29 +328,6 @@ footer {
   margin-right: -10px;
 }
 
-footer a {
-  font-family: "Roboto";
-  font-size: 1em;
-  color: #FFFFFF;
-  font-weight: 400;
-  line-height: 1.5;
-  background-color: grey;
-  width: 10%;
-  margin: 10px;
-  font-size: 20px;
-  border-radius: 10px;
-  text-align: center;
-  text-decoration: none;
-  font-weight: bold;
-  margin-bottom: 15px;
-  transition: all 0.5s;
-}
-
-footer a:hover {
-  background-color: #F4BE34;
-  color: black;
-}
-
 @media (max-width: 1024px) {
   .preamble {
     width: 80%;
@@ -351,8 +335,9 @@ footer a:hover {
     background: #FD0007;
     color: #FFFFFF;
     text-align: right;
-    padding: 20px;
     margin: 0 20px;
+    padding: 30px;
+    border-radius: 10px;
     padding: 20px;
     padding-bottom: 80px;
   }
@@ -364,11 +349,12 @@ footer a:hover {
     width: 45%;
     margin-right: 50%;
     padding: 20px;
-    padding-bottom: 200px;
+    padding-bottom: 100px;
   }
   .participation {
     margin-top: -50px;
     width: 80%;
+    padding-top: 150px;
   }
   .benefits {
     width: 90vw;
@@ -376,8 +362,9 @@ footer a:hover {
     background: #FD0007;
     color: #FFFFFF;
     text-align: right;
-    padding: 20px;
     margin: 0 20px;
+    padding: 30px;
+    border-radius: 10px;
     margin: auto;
     margin-top: 80px;
     z-index: 4;
@@ -388,8 +375,9 @@ footer a:hover {
     background: #03f807;
     color: #000000;
     text-align: left;
-    padding: 20px;
     margin: 0 20px;
+    padding: 30px;
+    border-radius: 10px;
     position: relative;
     z-index: 3;
     padding-top: 175px;
@@ -399,12 +387,6 @@ footer a:hover {
   .sidebar {
     margin-bottom: 250px;
   }
-  /*
-  .requirements p:nth-of-type(5) {
-      margin-left: -55vw;
-      width: 50vw;
-      height: 40vw;
-  } */
   footer {
     margin-left: 0px;
     z-index: 6;
@@ -512,6 +494,54 @@ footer a:hover {
     text-decoration: none;
     font-weight: bold;
   }
+}
+*,
+html {
+  padding: 0px;
+  margin: 0;
+  box-sizing: border-box;
+  direction: ltr;
+  z-index: 2;
+}
+
+body {
+  background: #272F39;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  font-family: "Roboto";
+}
+
+.page-wrapper::before {
+  content: "";
+  background-color: #272F39;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+
+.page-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1490px;
+  margin-top: 70px;
+  background: #000000 url(/images/SVG/Asset\ 3.svg) no-repeat;
+  background-size: 200px;
+  background-position: 83% 13%;
+  margin-bottom: 50px;
+  box-shadow: 0 -5px 10px rgba(255, 255, 255, 0.1), inset 0 -5px 10px rgba(255, 255, 255, 0.9);
+}
+
+#zen-supporting:not(#zen-explanation) {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: end;
 }
 
 /*# sourceMappingURL=style.css.map */

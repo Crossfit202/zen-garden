@@ -1,0 +1,453 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@300;400;500;700&display=swap');
+
+$hfontfamily: 'Press Start 2P';
+$h1fontsize: 40px;
+$white: #FFFFFF;
+$hfontsize: 20px;
+$yellowColor: #F4BE34;
+$font2: 'Roboto';
+$paraSize: 1em;
+$black: #000000;
+$blueColor: #001EA3;
+$redColor: #FD0007;
+$greenColor: #03f807;
+$machineColor: #272F39;
+
+@mixin p($color) {
+    font-family: $font2;
+    font-size: $paraSize;
+    color: $color;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+@mixin header1 {
+    font-family: $hfontfamily;
+    font-size: $h1fontsize;
+    color: $white;
+    font-weight: bold;
+}
+
+@mixin header2 {
+    font-family: $font2;
+}
+
+@mixin header3 {
+    h3 {
+        font-family: $hfontfamily;
+        font-size: $hfontsize;
+        font-weight: bold;
+        margin-bottom: 25px;
+        text-align: center;
+    }
+
+}
+
+@mixin box($width, $height, $background, $color, $text-align) {
+    width: $width;
+    height: $height;
+    background: $background;
+    color: $color;
+    text-align: $text-align;
+    margin: 0 20px;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.intro header {
+    @include box(90%, 120px, rgba($blueColor, 0.75), $white, right);
+    font-family: $hfontfamily;
+    margin: 0;
+    margin-right: 3px;
+    margin-top: 50px;
+    border-radius: 0;
+
+    h2 {
+        margin-top: 10px;
+        font-family: $font2;
+    }
+}
+
+.summary {
+    @include box(49vw, auto, rgb($greenColor, 0.8), $black, left);
+
+    @include p($black);
+    margin-top: -10px;
+    margin-right: 5%;
+    margin-bottom: 45px;
+
+    a {
+        text-decoration: none;
+        color: $black;
+    }
+}
+
+@keyframes leftSlide {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    68% {
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes rightSlide {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    68% {
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.participation,
+.summary,
+.requirements {
+    animation: rightSlide 2.5s ease;
+}
+
+.preamble,
+.explanation,
+.benefits {
+    animation: leftSlide 2s ease;
+}
+
+.preamble {
+    @include header3();
+    @include box(55%, auto, $redColor, $white, right);
+    @include p($white);
+    align-self: flex-start;
+    margin-left: 3%;
+    padding-top: 50px;
+    padding-bottom: 70px;
+}
+
+.explanation {
+    @include box(25%, auto, $blueColor, $white, left);
+    @include p($white);
+    position: relative;
+    margin-top: -55px;
+    margin-right: 68%;
+    z-index: 2;
+    padding-bottom: 300px;
+}
+
+.participation {
+    @include box(48%, auto, $yellowColor, $black, left);
+    @include p($black);
+    padding-top: 80px;
+    position: relative;
+    margin-right: 50px;
+    z-index: 1;
+    margin-top: -750px;
+
+}
+
+.benefits {
+    @include box(90%, auto, $redColor, $white , right);
+    @include p($white);
+    margin: auto;
+    margin-top: 150px;
+    position: relative;
+}
+
+.requirements {
+    @include box(55%, auto, $greenColor, $black, left);
+    @include p($black);
+    position: relative;
+    z-index: 1;
+    margin-top: -140px;
+    padding-top: 175px;
+}
+
+.sidebar {
+    @include box(96%, 300px, none, $white, left);
+    margin-top: 50px;
+    margin-bottom: 300px;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+}
+
+.design-archives {
+    background-color: $redColor;
+    color: white;
+    height: auto;
+
+    h3 {
+        padding: 10px;
+    }
+
+    ul {
+        max-height: 0;
+        overflow: hidden;
+        transition: all .7s ease;
+    }
+}
+
+.design-archives:hover ul {
+    max-height: 75px;
+    padding-bottom: 10px;
+}
+
+.zen-resources {
+    background-color: $yellowColor;
+    color: white;
+
+    h3 {
+        padding: 10px;
+    }
+
+    ul {
+        max-height: 0;
+        overflow: hidden;
+        transition: all .7s ease;
+    }
+}
+
+.zen-resources:hover ul {
+    max-height: 150px;
+    padding-bottom: 10px;
+}
+
+.wrapper li:hover {
+    background-color: white;
+    color: $black;
+
+    a {
+        color: black;
+    }
+}
+
+.design-selection {
+    background-color: $blueColor;
+    color: white;
+    height: auto;
+
+    h3 {
+        padding: 10px;
+    }
+
+    ul {
+        max-height: 0;
+        overflow: hidden;
+        transition: all .7s ease;
+    }
+}
+
+.design-selection:hover ul {
+    max-height: 250px;
+    padding-bottom: 10px;
+}
+
+ul {
+    list-style: none;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+footer {
+    display: flex;
+    background: transparent url(images/SVG/control_panel.svg) no-repeat;
+    height: 250px;
+    max-width: 1555px;
+    background-size: contain;
+    background-position: bottom;
+    justify-content: space-around;
+    align-items: end;
+    position: fixed;
+    bottom: -0;
+    width: 102%;
+    margin-right: -10px
+}
+
+
+@media (max-width: 1024px) {
+    .preamble {
+        @include box(80%, auto, $redColor, $white, right);
+        padding: 20px;
+        padding-bottom: 80px;
+    }
+
+    .page-wrapper {
+        background-position: 90% 27%;
+        background-size: 220px;
+    }
+
+    .explanation {
+        width: 45%;
+        margin-right: 50%;
+        padding: 20px;
+        padding-bottom: 100px;
+    }
+
+    .participation {
+        margin-top: -50px;
+        width: 80%;
+        padding-top: 150px
+    }
+
+    .benefits {
+        @include box(90vw, auto, $redColor, $white , right);
+        margin: auto;
+        margin-top: 80px;
+        z-index: 4;
+    }
+
+    .requirements {
+        @include box(70vw, auto, $greenColor, $black, left);
+        position: relative;
+        z-index: 3;
+        padding-top: 175px;
+        margin-left: 30vw;
+        margin-top: -120px;
+    }
+
+    .sidebar {
+        margin-bottom: 250px;
+    }
+
+    footer {
+        margin-left: 0px;
+        z-index: 6;
+    }
+}
+
+@media (max-width: 745px) {
+
+    .requirements {
+        margin-bottom: 20px;
+    }
+
+
+    footer a {
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 550px) {
+    .page-wrapper {
+        background-position: 95% 27%;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .page-wrapper {
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+        background-image: none;
+    }
+
+    .intro header,
+    .summary,
+    .preamble,
+    .explanation,
+    .participation,
+    .benefits,
+    .requirements,
+    .requirements p:nth-of-type(5),
+    .sidebar {
+        width: 95%;
+        height: 100%;
+        margin: auto;
+        margin-bottom: 20px;
+        padding: 20px;
+    }
+
+    .sidebar {
+        z-index: 0;
+    }
+
+    .intro header {
+        width: 80%;
+        margin-right: 10px;
+    }
+
+    .summary {
+        margin-top: -20px;
+    }
+
+    .preamble {
+        padding-bottom: 150px;
+    }
+
+    .explanation {
+        margin-top: -150px;
+        width: 70%;
+        margin-right: 10px;
+    }
+
+    .participation {
+        width: 80%;
+        padding-top: 150px;
+        margin-left: 10px;
+        margin-top: -125px;
+        padding-bottom: 100px;
+    }
+
+    .benefits {
+        width: 50%;
+        margin-right: 10px;
+        margin-top: -100px;
+    }
+
+    .requirements {
+        padding-top: 120px;
+        margin-top: -100px;
+        width: 90%;
+    }
+
+    .requirements p:nth-of-type(5) {
+        border-radius: 0px;
+        margin-top: 50px;
+    }
+
+    .design-archives,
+    .design-selection,
+    .zen-resources {
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+
+        ul {
+            max-height: 100%;
+        }
+    }
+
+    footer {
+        height: 150px;
+        max-width: 1600px;
+        background-size: contain;
+        background-position: bottom;
+        justify-content: space-evenly;
+        bottom: 0;
+        width: 100%;
+    }
+
+    footer a {
+        margin: 10px;
+        font-size: 12px;
+        border-radius: 10px;
+        text-align: center;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+}
