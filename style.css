@@ -38,7 +38,7 @@ h3 {
 .page-wrapper {
   position: relative;
   width: 100%;
-  max-width: 1500px;
+  max-width: 1490px;
   margin-top: 70px;
   background: #000000 url(/images/SVG/Asset\ 3.svg) no-repeat;
   background-size: 200px;
@@ -63,6 +63,7 @@ h3 {
   margin: 0 20px;
   font-family: "Press Start 2P";
   margin: 0;
+  margin-right: 3px;
   margin-top: 50px;
 }
 .intro header h2 {
@@ -71,7 +72,7 @@ h3 {
 }
 
 .summary {
-  width: 50vw;
+  width: 49vw;
   height: auto;
   background: rgba(3, 248, 7, 0.8);
   color: #000000;
@@ -84,7 +85,7 @@ h3 {
   font-weight: 400;
   line-height: 1.5;
   margin-top: -10px;
-  margin-right: 5vw;
+  margin-right: 5%;
   margin-bottom: 45px;
   padding: 5px;
 }
@@ -93,8 +94,15 @@ h3 {
   color: #000000;
 }
 
+#zen-supporting:not(#zen-explanation) {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: end;
+}
+
 .preamble {
-  width: 50vw;
+  width: 55%;
   height: auto;
   background: #FD0007;
   color: #FFFFFF;
@@ -107,7 +115,7 @@ h3 {
   font-weight: 400;
   line-height: 1.5;
   align-self: flex-start;
-  margin-left: 3vw;
+  margin-left: 3%;
   padding-top: 50px;
   padding-bottom: 70px;
 }
@@ -135,8 +143,7 @@ h3 {
   padding: 10px;
   position: relative;
   margin-top: -55px;
-  margin-left: 5vw;
-  padding: 1vw;
+  margin-right: 68%;
   z-index: 2;
   padding-bottom: 300px;
 }
@@ -154,12 +161,12 @@ h3 {
   color: #000000;
   font-weight: 400;
   line-height: 1.5;
-  padding: 1vw;
+  padding: 10px;
   padding-top: 80px;
   position: relative;
-  margin-top: -750px;
-  margin-left: 40%;
+  margin-right: 50px;
   z-index: 1;
+  margin-top: -750px;
 }
 
 .benefits {
@@ -181,7 +188,7 @@ h3 {
 }
 
 .requirements {
-  width: 50%;
+  width: 55%;
   height: auto;
   background: #03f807;
   color: #000000;
@@ -193,24 +200,25 @@ h3 {
   color: #000000;
   font-weight: 400;
   line-height: 1.5;
+  position: relative;
+  z-index: 1;
   margin-top: -150px;
-  margin-left: 35vw;
   padding-top: 175px;
 }
 
+/*
 .requirements p:nth-of-type(5) {
-  background-color: #F4BE34;
-  margin-top: -300px;
-  margin-left: -90%;
-  height: 400px;
-  width: 400px;
-  border-radius: 50%;
-  padding-top: 30%;
-  padding-right: 5%;
-  padding-left: 15%;
-  text-align: center;
-}
-
+    background-color: $yellowColor;
+    margin-top: -300px;
+    margin-left: -90%;
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    padding-top: 30%;
+    padding-right: 5%;
+    padding-left: 15%;
+    text-align: center;
+} */
 .sidebar {
   width: 96%;
   height: 300px;
@@ -220,7 +228,7 @@ h3 {
   padding: 20px;
   margin: 0 20px;
   margin-top: 50px;
-  margin-bottom: 100px;
+  margin-bottom: 300px;
 }
 
 .sidebar a {
@@ -239,11 +247,12 @@ h3 {
 .design-archives ul {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.7s ease;
+  transition: all 0.7s ease;
 }
 
 .design-archives:hover ul {
   max-height: 75px;
+  padding-bottom: 10px;
 }
 
 .zen-resources {
@@ -256,11 +265,20 @@ h3 {
 .zen-resources ul {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.7s ease;
+  transition: all 0.7s ease;
 }
 
 .zen-resources:hover ul {
-  max-height: 75px;
+  max-height: 150px;
+  padding-bottom: 10px;
+}
+
+.wrapper li:hover {
+  background-color: white;
+  color: #000000;
+}
+.wrapper li:hover a {
+  color: black;
 }
 
 .design-selection {
@@ -274,11 +292,12 @@ h3 {
 .design-selection ul {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.7s ease;
+  transition: all 0.7s ease;
 }
 
 .design-selection:hover ul {
-  max-height: 100%;
+  max-height: 250px;
+  padding-bottom: 10px;
 }
 
 ul {
@@ -289,17 +308,17 @@ ul {
 
 footer {
   display: flex;
-  background: transparent url(images/SVG/Asset\ 2.svg) no-repeat;
+  background: transparent url(images/SVG/control_panel.svg) no-repeat;
   height: 250px;
-  max-width: 1600px;
+  max-width: 1555px;
   background-size: contain;
   background-position: bottom;
   justify-content: space-around;
   align-items: end;
   position: fixed;
   bottom: 0;
-  width: 100%;
-  margin-left: -40px;
+  width: 102%;
+  margin-right: -10px;
 }
 
 footer a {
@@ -316,6 +335,7 @@ footer a {
   text-align: center;
   text-decoration: none;
   font-weight: bold;
+  margin-bottom: 15px;
 }
 
 footer a:hover {
@@ -325,7 +345,7 @@ footer a:hover {
 
 @media (max-width: 1024px) {
   .preamble {
-    width: 70vw;
+    width: 80%;
     height: auto;
     background: #FD0007;
     color: #FFFFFF;
@@ -335,24 +355,19 @@ footer a:hover {
     padding: 20px;
     padding-bottom: 80px;
   }
+  .page-wrapper {
+    background-position: 90% 27%;
+    background-size: 220px;
+  }
   .explanation {
-    width: 35vw;
+    width: 45%;
+    margin-right: 50%;
     padding: 20px;
-    padding-bottom: 300px;
+    padding-bottom: 200px;
   }
   .participation {
-    width: 50%;
-    height: auto;
-    background: #F4BE34;
-    color: #000000;
-    text-align: left;
-    padding: 20px;
-    margin: 0 20px;
-    padding: 20px;
-    padding-top: 100px;
-    z-index: 1;
-    margin-left: 45vw;
-    margin-top: -850px;
+    margin-top: -50px;
+    width: 80%;
   }
   .benefits {
     width: 90vw;
@@ -367,7 +382,7 @@ footer a:hover {
     z-index: 4;
   }
   .requirements {
-    width: 50vw;
+    width: 70vw;
     height: auto;
     background: #03f807;
     color: #000000;
@@ -376,18 +391,16 @@ footer a:hover {
     margin: 0 20px;
     position: relative;
     z-index: 3;
-    padding-top: 250px;
-    margin-left: 45vw;
-    margin-top: -220px;
+    padding-top: 200px;
+    margin-left: 30vw;
+    margin-top: -120px;
   }
+  /*
   .requirements p:nth-of-type(5) {
-    margin-left: -55vw;
-    width: 50vw;
-    height: 40vw;
-  }
-  div#zen-requirements.requirements p:last-child {
-    text-align: right;
-  }
+      margin-left: -55vw;
+      width: 50vw;
+      height: 40vw;
+  } */
   .sidebar {
     width: auto;
     margin-bottom: 0;
@@ -398,25 +411,24 @@ footer a:hover {
   }
 }
 @media (max-width: 745px) {
-  .participation {
-    margin-top: -1030px;
-  }
   .requirements {
     margin-bottom: 20px;
-  }
-  footer {
-    width: 100vw;
-    height: auto;
   }
   footer a {
     font-size: 0.8em;
   }
 }
-@media (max-width: 480px) {
+@media (max-width: 550px) {
+  .page-wrapper {
+    background-position: 95% 27%;
+  }
+}
+@media (max-width: 500px) {
   .page-wrapper {
     width: 95%;
     display: flex;
     flex-direction: column;
+    background-image: none;
   }
   .intro header,
   .summary,
@@ -475,7 +487,7 @@ footer a:hover {
   .design-archives,
   .design-selection,
   .zen-resources {
-    padding-bottom: 3px;
+    padding-bottom: 10px;
     margin-bottom: 20px;
   }
   .design-archives ul,
@@ -489,11 +501,8 @@ footer a:hover {
     background-size: contain;
     background-position: bottom;
     justify-content: space-evenly;
-    align-items: end;
-    position: fixed;
     bottom: 0;
     width: 100%;
-    margin-left: 0px;
   }
   footer a {
     margin: 10px;

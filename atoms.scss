@@ -64,7 +64,6 @@ html {
     z-index: 2;
 }
 
-
 body {
     background: $machineColor;
     display: flex;
@@ -95,7 +94,7 @@ h3 {
 .page-wrapper {
     position: relative;
     width: 100%;
-    max-width: 1500px;
+    max-width: 1490px;
     margin-top: 70px;
     background: $black url(/images/SVG/Asset\ 3.svg) no-repeat;
     background-size: 200px;
@@ -114,6 +113,7 @@ h3 {
     @include box(90%, 100px, rgba($blueColor, 0.75), $white, right);
     font-family: $hfontfamily;
     margin: 0;
+    margin-right: 3px;
     margin-top: 50px;
 
     h2 {
@@ -123,11 +123,11 @@ h3 {
 }
 
 .summary {
-    @include box(50vw, auto, rgb($greenColor, 0.8), $black, left);
+    @include box(49vw, auto, rgb($greenColor, 0.8), $black, left);
 
     @include p($black);
     margin-top: -10px;
-    margin-right: 5vw;
+    margin-right: 5%;
     margin-bottom: 45px;
     padding: 5px;
 
@@ -137,12 +137,19 @@ h3 {
     }
 }
 
+#zen-supporting:not(#zen-explanation) {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: end;
+}
+
 .preamble {
     @include header3();
-    @include box(50vw, auto, $redColor, $white, right);
+    @include box(55%, auto, $redColor, $white, right);
     @include p($white);
     align-self: flex-start;
-    margin-left: 3vw;
+    margin-left: 3%;
     padding-top: 50px;
     padding-bottom: 70px;
 }
@@ -153,8 +160,7 @@ h3 {
     padding: 10px;
     position: relative;
     margin-top: -55px;
-    margin-left: 5vw;
-    padding: 1vw;
+    margin-right: 68%;
     z-index: 2;
     padding-bottom: 300px;
 }
@@ -162,12 +168,12 @@ h3 {
 .participation {
     @include box(48%, auto, $yellowColor, $black, left);
     @include p($black);
-    padding: 1vw;
+    padding: 10px;
     padding-top: 80px;
     position: relative;
-    margin-top: -750px;
-    margin-left: 40%;
+    margin-right: 50px;
     z-index: 1;
+    margin-top: -750px;
 
 }
 
@@ -180,13 +186,15 @@ h3 {
 }
 
 .requirements {
-    @include box(50%, auto, $greenColor, $black, left);
+    @include box(55%, auto, $greenColor, $black, left);
     @include p($black);
+    position: relative;
+    z-index: 1;
     margin-top: -150px;
-    margin-left: 35vw;
     padding-top: 175px;
 }
 
+/*
 .requirements p:nth-of-type(5) {
     background-color: $yellowColor;
     margin-top: -300px;
@@ -198,12 +206,12 @@ h3 {
     padding-right: 5%;
     padding-left: 15%;
     text-align: center;
-}
+} */
 
 .sidebar {
     @include box(96%, 300px, none, $white, left);
     margin-top: 50px;
-    margin-bottom: 100px;
+    margin-bottom: 300px;
 }
 
 .sidebar a {
@@ -224,12 +232,13 @@ h3 {
     ul {
         max-height: 0;
         overflow: hidden;
-        transition: max-height .7s ease;
+        transition: all .7s ease;
     }
 }
 
 .design-archives:hover ul {
     max-height: 75px;
+    padding-bottom: 10px;
 }
 
 .zen-resources {
@@ -243,12 +252,22 @@ h3 {
     ul {
         max-height: 0;
         overflow: hidden;
-        transition: max-height .7s ease;
+        transition: all .7s ease;
     }
 }
 
 .zen-resources:hover ul {
-    max-height: 75px;
+    max-height: 150px;
+    padding-bottom: 10px;
+}
+
+.wrapper li:hover {
+    background-color: white;
+    color: $black;
+
+    a {
+        color: black;
+    }
 }
 
 .design-selection {
@@ -263,12 +282,13 @@ h3 {
     ul {
         max-height: 0;
         overflow: hidden;
-        transition: max-height .7s ease;
+        transition: all .7s ease;
     }
 }
 
 .design-selection:hover ul {
-    max-height: 100%;
+    max-height: 250px;
+    padding-bottom: 10px;
 }
 
 ul {
@@ -280,17 +300,17 @@ ul {
 
 footer {
     display: flex;
-    background: transparent url(images/SVG/Asset\ 2.svg) no-repeat;
+    background: transparent url(images/SVG/control_panel.svg) no-repeat;
     height: 250px;
-    max-width: 1600px;
+    max-width: 1555px;
     background-size: contain;
     background-position: bottom;
     justify-content: space-around;
     align-items: end;
     position: fixed;
     bottom: -0;
-    width: 100%;
-    margin-left: -40px;
+    width: 102%;
+    margin-right: -10px
 }
 
 footer a {
@@ -303,6 +323,7 @@ footer a {
     text-align: center;
     text-decoration: none;
     font-weight: bold;
+    margin-bottom: 15px;
 }
 
 footer a:hover {
@@ -311,26 +332,27 @@ footer a:hover {
 }
 
 @media (max-width: 1024px) {
-
     .preamble {
-        @include box(70vw, auto, $redColor, $white, right);
+        @include box(80%, auto, $redColor, $white, right);
         padding: 20px;
         padding-bottom: 80px;
     }
 
+    .page-wrapper {
+        background-position: 90% 27%;
+        background-size: 220px;
+    }
+
     .explanation {
-        width: 35vw;
+        width: 45%;
+        margin-right: 50%;
         padding: 20px;
-        padding-bottom: 300px;
+        padding-bottom: 200px;
     }
 
     .participation {
-        @include box(50%, auto, $yellowColor, $black, left);
-        padding: 20px;
-        padding-top: 100px;
-        z-index: 1;
-        margin-left: 45vw;
-        margin-top: -850px;
+        margin-top: -50px;
+        width: 80%;
     }
 
     .benefits {
@@ -341,23 +363,20 @@ footer a:hover {
     }
 
     .requirements {
-        @include box(50vw, auto, $greenColor, $black, left);
+        @include box(70vw, auto, $greenColor, $black, left);
         position: relative;
         z-index: 3;
-        padding-top: 250px;
-        margin-left: 45vw;
-        margin-top: -220px;
+        padding-top: 200px;
+        margin-left: 30vw;
+        margin-top: -120px;
     }
 
+    /*
     .requirements p:nth-of-type(5) {
         margin-left: -55vw;
         width: 50vw;
         height: 40vw;
-    }
-
-    div#zen-requirements.requirements p:last-child {
-        text-align: right;
-    }
+    } */
 
     .sidebar {
         width: auto;
@@ -371,33 +390,30 @@ footer a:hover {
 }
 
 @media (max-width: 745px) {
-    .participation {
-        margin-top: -1030px;
-    }
-    
+
     .requirements {
         margin-bottom: 20px;
     }
-    
-    .sidebar {
-    }
 
-    footer {
-        width: 100vw;
-        height: auto;
-    }
 
     footer a {
         font-size: 0.8em;
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 550px) {
+    .page-wrapper {
+        background-position: 95% 27%;
+    }
+}
+
+@media (max-width: 500px) {
 
     .page-wrapper {
         width: 95%;
         display: flex;
         flex-direction: column;
+        background-image: none;
     }
 
     .intro header,
@@ -467,12 +483,11 @@ footer a:hover {
     .design-archives,
     .design-selection,
     .zen-resources {
-        padding-bottom: 3px;
+        padding-bottom: 10px;
         margin-bottom: 20px;
 
         ul {
             max-height: 100%;
-
         }
     }
 
@@ -482,11 +497,8 @@ footer a:hover {
         background-size: contain;
         background-position: bottom;
         justify-content: space-evenly;
-        align-items: end;
-        position: fixed;
         bottom: 0;
         width: 100%;
-        margin-left: 0px;
     }
 
     footer a {
