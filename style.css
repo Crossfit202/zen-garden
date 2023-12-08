@@ -330,6 +330,18 @@ footer {
 }
 
 @media (max-width: 1024px) {
+  .design-archives,
+  .design-selection,
+  .zen-resources {
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+  }
+  .design-archives ul,
+  .design-selection ul,
+  .zen-resources ul {
+    height: 100%;
+    max-height: 100%;
+  }
   .preamble {
     width: 80%;
     height: auto;
